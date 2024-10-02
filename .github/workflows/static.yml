@@ -18,7 +18,7 @@ jobs:
           rm -Rf .github
 
       - name: Generate Directory Listings
-        uses: tobozo/github-pages-directory-listing@v4.0.0
+        uses: tobozo/github-pages-directory-listing@main
         with:
           FOLDER: .      #directory to generate index
 
