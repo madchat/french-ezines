@@ -11,12 +11,14 @@ jobs:
         with:
           ref: main
 
-      - name: Remove index.html
+      - name: Cleanup root folder
         run: |
-          rm index.html
+          rm index.html LICENSE README.md
+          rm -Rf .git
+          rm -Rf .github
 
       - name: Generate Directory Listings
-        uses: jayanta525/github-pages-directory-listing@v4.0.0
+        uses: tobozo/github-pages-directory-listing@v4.0.0
         with:
           FOLDER: .      #directory to generate index
 
